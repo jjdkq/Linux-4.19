@@ -34,7 +34,7 @@ dtbs:
 #使用dtc(位于内核目录下的scripts/dtc/中)编译成.dtb文件
 #dtc -I dts -O dtb -o s3c2440-tq2440.dtb $(src_dts)	
 	
-#方法2:.dts中可以像什.c文件那样用#define和#include
+#方法2:.dts中可以像.c文件那样用#define和#include
 #使用cpp命令对.dts文件进行处理,完成文件包含和宏替换的工作
 	cpp -nostdinc -I. -undef -x assembler-with-cpp $(src_dts) > $(tmp_dts)
 #将cpp处理得到的中间文件通过dtc命令编译成.dtb文件
